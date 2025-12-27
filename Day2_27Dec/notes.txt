@@ -4,3 +4,23 @@ int a = 10; //integer type
 var b = "hello";  // type inference 
      b =10;  //not allowed 
      b ="GLS"; //allowed 
+================================
+arr.sort(); //ascending
+arr.sort(()=>{}); //
+print(arr);
+
+
+==============================
+final and const  -
+const PI  = 3.14 ;
+PI  = 3.12; //not allowed
+final a  = 13 ;
+a = 14; // not allowed
+
+
+operators -  
+type test  => is , is! , as 
+null aware => ? , ?? , ?. , !.
+
+
+

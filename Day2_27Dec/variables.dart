@@ -34,5 +34,9 @@ void main(){
   // print(arr.first);
   // print(arr.last);
   // print(arr.isEmpty);//false
-  print(arr.contains(13)); //true 
+  // print(arr.contains(13)); //true 
+  // arr.sort(); //asce
+  // arr.sort((a,b)=>a.compareTo(b)); //asce
+  arr.sort((a,b)=> b.compareTo(a)); //desc
+  print(arr);
 }
