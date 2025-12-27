@@ -1,0 +1,6 @@
+variables - int, double, bool, String, List, Map, Set, var, dynamic 
+
+int a = 10; //integer type 
+var b = "hello";  // type inference 
+     b =10;  //not allowed 
+     b ="GLS"; //allowed 
