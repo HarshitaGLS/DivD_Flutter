@@ -1,0 +1,14 @@
+OOP - 
+class 
+Object
+
+Employee - empid, name, exp, hiredate, calculateSal()
+Developer extends Employee - lang, projects etc..
+Tester 
+HR
+Admin
+SalesExecutive  extends Employee - tragets etc. 
+
+
+multiple inheritance --> interface --> mixins 
+
