@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Jan13/CounterStfWidget.dart';
+import 'package:flutter_application_1/Jan13/ImageWidget.dart';
 import 'package:flutter_application_1/StfWidget.dart';
 
 class MyWidget extends StatelessWidget {
@@ -16,10 +17,11 @@ class MyWidget extends StatelessWidget {
       ),
       body:Column(
         children: [
-           Text("This is first flutter web app"),
-           Stfwidget(),
-           Text("column demo"),
-           CounterStfWidget()
+          //  Text("This is first flutter web app"),
+          //  Stfwidget(),
+          //  Text("column demo"),
+          //  CounterStfWidget(),
+           Imagewidget()
         ],
       )
      
