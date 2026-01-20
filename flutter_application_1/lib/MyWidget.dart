@@ -17,10 +17,10 @@ class MyWidget extends StatelessWidget {
       ),
       body:Column(
         children: [
-          //  Text("This is first flutter web app"),
-          //  Stfwidget(),
-          //  Text("column demo"),
-          //  CounterStfWidget(),
+           Text("This is first flutter web app"),
+           Stfwidget(),
+           Text("column demo"),
+           CounterStfWidget(),
            Imagewidget()
         ],
       )
