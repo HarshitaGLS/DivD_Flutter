@@ -1,0 +1,38 @@
+Regular Expression -
+^
+$
+
+[a-z]
+[A-Z]
+[0-9] => [\d]
+
+[a-zA-Z0-9_] => \w
+[a-zA-Z0-9_\.\#]
+
+[\w]+ ( 1 or more char)
+[\w]* (0 or more)
+[\w]? (0 or 1)
+[\w]
+[\d]{min,max} => [\d]{10,10}
+[a-zA-Z]{2,3}
+
+^[a-zA-Z]+ $
+
+^[\w-\.]+@[\w-]+.[a-zA-Z]{2,3}$
+
+=================================================
+Form Handling 
+List View 
+Reponsive  - Felxible, expanded , flex 
+stack , positioned
+
+
+
+
+
+
+
+
+
+
+

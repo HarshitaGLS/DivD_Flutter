@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_demo/MainWidget.dart';
+import 'package:flutter_widget_demo/login_form.dart';
 
 class Homescreen extends StatelessWidget {
   const Homescreen({super.key});
@@ -16,7 +17,7 @@ class Homescreen extends StatelessWidget {
           backgroundColor: const Color.fromARGB(255, 237, 240, 241), 
           foregroundColor: Colors.purple,
         ), */
-      floatingActionButton: FloatingActionButton.extended(onPressed: (){}, label: Text("compose") , icon:Icon(Icons.edit)),
+      // floatingActionButton: FloatingActionButton.extended(onPressed: (){}, label: Text("compose") , icon:Icon(Icons.edit)),
       
         appBar: AppBar(
           title: Text(
@@ -34,7 +35,8 @@ class Homescreen extends StatelessWidget {
         //   width: double.infinity,height: double.infinity, semanticLabel: "Loading Image....",
         //   repeat: ImageRepeat.repeat, fit: BoxFit.fill,
         //   )
-        body: Mainwidget(),
+        // body: Mainwidget(),
+        body:LoginForm()
       ),
     );
   }
