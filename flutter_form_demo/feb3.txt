@@ -1,0 +1,26 @@
+
+Regular Exp - ?=.*
+(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[@#$&*-+=.]).{8,20}
+
+Scafflod with child Widget (dynamic)
+flutterlogo
+Expanded , flex 
+GestureDetector, Inkwell 
+Navigator 
+Radio
+spacing 
+onChanged, onTap
+text  - maxLength, MaxLines 
+
+
+Radio 
+checkbox 
+dropdown 
+snackbar
+
+
+
+
+
+
+

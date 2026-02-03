@@ -11,12 +11,12 @@ class Homescreen extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
-      /*  floatingActionButton: FloatingActionButton(
+      floatingActionButton: FloatingActionButton(
           onPressed: () {},
           child:Icon(Icons.add), tooltip:"Add Task",
-          backgroundColor: const Color.fromARGB(255, 237, 240, 241), 
+          backgroundColor: const Color.fromARGB(255, 237, 240, 241),
           foregroundColor: Colors.purple,
-        ), */
+        ),
       // floatingActionButton: FloatingActionButton.extended(onPressed: (){}, label: Text("compose") , icon:Icon(Icons.edit)),
       
         appBar: AppBar(
