@@ -16,6 +16,7 @@ text  - maxLength, MaxLines
 Radio 
 checkbox 
 dropdown 
+singleChildScrollView 
 snackbar
 
 

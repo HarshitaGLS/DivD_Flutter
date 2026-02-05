@@ -66,7 +66,8 @@ class _LoginPageState extends State<LoginPage> {
                     child: ElevatedButton(
                       onPressed: () {
                         if (formKey.currentState!.validate()) {
-                          print("form submitted");
+                          // print("form submitted");
+                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content:Text("Logged In Successfully")));
                         }
                       },
                       child: Text("Login"),

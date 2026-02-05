@@ -1,0 +1,21 @@
+array.map((){
+    return 
+}).toList()
+
+
+List<String> cities = ["Pune","Kota","Mumbai","Surat","Kolkata"]
+
+dff(
+    items:[
+        dropdownmenu(value,child)
+    ]
+)
+
+ListView and ListTile  , divider 
+Stack and Positioned 
+GridView 
+Navbar
+FocusNode / Dialog 
+
+textbox Add 
+List => add > tasks.add()
