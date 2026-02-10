@@ -1,0 +1,28 @@
+string task ,bool completed  = false 
+
+List<String> = [ {},{},{}]
+
+class Taskclass {
+  String ?taskname;
+  bool ?completed;
+  Taskclass({required this.taskname , this.completed = false});
+}
+
+
+List<Taskclass> tasklist = [
+  Taskclass(taskname:"to start working on forms"),
+  Taskclass(taskname:"forms validations",completed:true),
+]
+
+
+class Taskclass {
+  String ?taskname;
+  bool ?completed;
+  Taskclass(this.taskname , this.completed);
+
+}
+
+List<Taskclass> tasklist = [
+  Taskclass("ethejt",true)
+
+]
