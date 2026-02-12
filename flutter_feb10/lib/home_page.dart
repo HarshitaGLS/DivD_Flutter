@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feb10/app_scaffold.dart';
+import 'package:flutter_feb10/grid_view_demo.dart';
 import 'package:flutter_feb10/list_view_demo.dart';
 
 class HomePage extends StatefulWidget {
@@ -24,7 +25,11 @@ class _HomePageState extends State<HomePage> {
       TextButton(onPressed: (){
         Navigator.push(context, MaterialPageRoute(builder: (BuildContext builder){ return AppScaffold(mychildren: Text("This is about us page"));
         }));
-      }, child: Text("About Us"))
+      }, child: Text("About Us")),
+      TextButton(onPressed: (){
+        Navigator.push(context, MaterialPageRoute(builder: (BuildContext builder){ return GridViewDemo();
+        }));
+      }, child: Text("Grid View"))
       ],
     )
     );

@@ -21,13 +21,15 @@ class _TaskListState extends State<TaskList> {
       mychildren:ListView.builder(
         itemCount: mytasklist.length,
         itemBuilder: (context,index){
-          return ListTile(title:Text(mytasklist[index].taskname.toString()),
-          subtitle: Text(mytasklist[index].completed!  ? "Done":"not done"),
-          trailing: Checkbox(value: mytasklist[index].completed, onChanged: (value){
-            setState(() {
-               mytasklist[index].completed = value;
-            });
-          }),
+          return Card( elevation: 10,shadowColor: Colors.cyan,
+            child: ListTile(title:Text(mytasklist[index].taskname.toString()),
+            subtitle: Text(mytasklist[index].completed!  ? "Done":"not done"),
+            trailing: Checkbox(value: mytasklist[index].completed, onChanged: (value){
+              setState(() {
+                 mytasklist[index].completed = value;
+              });
+            }),
+            ),
           );
         }));
   }
