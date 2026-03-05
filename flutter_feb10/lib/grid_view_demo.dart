@@ -9,14 +9,16 @@ class GridViewDemo extends StatefulWidget {
 }
 
 class _GridViewDemoState extends State<GridViewDemo> {
-  List<String> images = ["assets/images/a.jpg","assets/images/c.webp","assets/images/a.jpg","assets/images/d.jpg","assets/images/e.jpeg","assets/images/a.jpg","assets/images/d.jpg","assets/images/e.jpeg","assets/images/a.jpg"];
+  // List<String> images = ["assets/images/a.jpg","assets/images/c.webp","assets/images/a.jpg","assets/images/d.jpg","assets/images/e.jpeg","assets/images/a.jpg","assets/images/d.jpg","assets/images/e.jpeg","assets/images/a.jpg"];
+   List<String> images = ["https://images.pexels.com/photos/35581905/pexels-photo-35581905.jpeg",
+   "https://images.pexels.com/photos/35968722/pexels-photo-35968722.jpeg"];
   @override
   Widget build(BuildContext context) {
     return AppScaffold(
       mychildren: GridView.builder(itemCount: images.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4),
          itemBuilder: (context, index) {
-        return Image.asset(images[index],fit:BoxFit.cover);
+        return Image.network(images[index],fit:BoxFit.cover);
       },)
     );
 
