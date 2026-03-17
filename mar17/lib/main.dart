@@ -5,8 +5,15 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  bool isDark = false;
 
   // This widget is the root of your application.
   @override
@@ -14,21 +21,41 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Mar17 Widgets Demo',
       debugShowCheckedModeBanner: false,
-       home: TabDemoScreen()
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo ,
+        brightness:isDark ? Brightness.dark :Brightness.light),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style:ElevatedButton.styleFrom(
+            shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(2))
+          )
+        ),
+        textTheme: TextTheme(
+          titleMedium: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.bold
+          )
+        ),
+        cardTheme: CardThemeData()
+      ),
+       home: TabDemoScreen(isDark:isDark , onChanged: (val){setState(() {
+              isDark = val;
+            });})
     );
   }
 }
 
 
 class TabDemoScreen extends StatefulWidget {
-  const TabDemoScreen({super.key});
+  final bool isDark;
+  final Function(bool) onChanged;
+  const TabDemoScreen({super.key,required this.isDark, required this.onChanged});
 
   @override
   State<TabDemoScreen> createState() => _TabDemoScreenState();
 }
 
 class _TabDemoScreenState extends State<TabDemoScreen> {
-  bool isDark = false;
+  
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -38,9 +65,7 @@ class _TabDemoScreenState extends State<TabDemoScreen> {
         appBar: AppBar(
           title:Text("Home"),
           actions: [
-            Switch(value: isDark, onChanged: (val){setState(() {
-              isDark = val;
-            });}),
+            Switch(value: widget.isDark, onChanged:widget.onChanged ),
           ],
           bottom: TabBar(
             labelColor: Colors.teal,

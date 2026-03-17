@@ -13,8 +13,14 @@ class _MessageScreenState extends State<MessageScreen> {
   Widget build(BuildContext context) {
     return Center(child: Column(
       children: [
-        Text("Messages"),SizedBox(height: 30,),
-        ElevatedButton(onPressed: ()async{
+        Text("Messages",
+        style:Theme.of(context).textTheme.titleMedium),SizedBox(height: 30,),
+        ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Theme.of(context).colorScheme.surface,
+             foregroundColor: Theme.of(context).colorScheme.error           
+          ),  
+        onPressed: ()async{
          DateTime? date1 = await showDatePicker(context: context, 
                         firstDate: DateTime(2000), lastDate: DateTime(2031),
                         initialDate: DateTime.now()
