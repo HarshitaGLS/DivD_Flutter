@@ -6,13 +6,17 @@ class FileOperations {
   // 📁 Get file path
   Future<File> getFile() async {
     final dir = await getApplicationDocumentsDirectory();
-    return File('${dir.path}/myfile.txt');
+    // print(dir.path);
+    // return File('${dir.path}/myfile.txt');
+    return File("./file1.txt");
   }
 
   // ✍️ Write data
   Future<void> writeData(String data) async {
     final file = await getFile();
-    await file.writeAsString(data);
+    // await file.writeAsString(data);
+    await file.writeAsString(data, mode: FileMode.append);
+
   }
 
   // 📖 Read data

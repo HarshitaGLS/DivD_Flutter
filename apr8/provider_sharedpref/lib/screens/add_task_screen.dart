@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:provider_sharedpref/provider/task_provider.dart';
 
 class AddTaskScreen extends StatelessWidget {
   AddTaskScreen({super.key});
@@ -25,7 +27,10 @@ class AddTaskScreen extends StatelessWidget {
 
             ElevatedButton(
               onPressed: () {
-                Navigator.pop(context, controller.text); // 🔥 return data
+                // Navigator.pop(context, controller.text); 
+                
+                 Provider.of<TaskProvider>(context,listen:false ).addTask(controller.text);
+                 Navigator.pop(context); 
               },
               child: Text("Add"),
             )
